@@ -4,12 +4,12 @@ import * as React from "react";
 import 'react-phone-number-input/style.css';
 import PhoneInput from 'react-phone-number-input';
 import { cn } from '@/lib/utils';
-import type { Props as PhoneInputProps } from 'react-phone-number-input';
+import type { DefaultInputComponentProps, Props as PhoneInputProps } from 'react-phone-number-input';
 
 function PhoneInputStyled({
   className,
   ...props
-}: PhoneInputProps<string | any>) {
+}: PhoneInputProps<DefaultInputComponentProps>) {
   return (
     <PhoneInput
       {...props}

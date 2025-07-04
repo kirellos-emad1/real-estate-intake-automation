@@ -39,6 +39,7 @@ const BookViewForm = () => {
                 toast.success("Viewing booked successfully!");
                 form.reset();
             } catch (error) {
+                console.log(error)
                 toast.error("Failed to book viewing.");
             }
         });

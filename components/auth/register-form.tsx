@@ -50,8 +50,7 @@ const RegisterForm = () => {
                     form.reset();
                 }
             } catch (error) {
-                
-                toast.error("An unexpected error occurred. Please try again.");
+                console.log(error)
             }
         });
     };

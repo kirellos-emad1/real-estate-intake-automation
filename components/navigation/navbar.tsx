@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { Menu, X, User, LogOut, LogIn } from "lucide-react";
 import { Button } from "../ui/button";
 import { logout } from "@/actions/auth";
+import Image from "next/image";
 
 type UserMetadata = {
     avatar_url?: string;
@@ -107,7 +108,9 @@ export default function Navbar({user}:{user?:UserMetadata}) {
                                             className="flex items-center space-x-2 p-2 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200"
                                         >
                                             {user?.avatar_url ? (
-                                                <img
+                                                <Image
+                                                width={32}
+                                                height={32}
                                                     src={user.avatar_url}
                                                     alt={user.full_name || "User"}
                                                     className="w-8 h-8 rounded-full object-cover"
@@ -222,7 +225,9 @@ export default function Navbar({user}:{user?:UserMetadata}) {
                                         <>
                                             <div className="flex items-center space-x-3 px-4 py-2">
                                                 {user?.avatar_url ? (
-                                                    <img
+                                                    <Image
+                                                    width={40}
+                                                    height={40}
                                                         src={user.avatar_url}
                                                         alt={user.full_name || "Guest"}
                                                         className="w-10 h-10 rounded-full object-cover"

@@ -26,7 +26,6 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { REGEXP_ONLY_DIGITS } from "input-otp";
 import { otpSchema } from "@/schema";
-import { createClient } from "@/utils/supabase/client";
 
 
 
@@ -80,7 +79,7 @@ const ConfirmEmailForm = () => {
         <CardWrapper headerLabel="Confirm Your Email">
             <div className="text-center mb-6">
                 <p className="text-sm ">
-                    We've sent a verification code to
+                    We&apos;ve sent a verification code to
                 </p>
                 <p className="font-semibold ">{email}</p>
                 <p className="text-sm  mt-2">
@@ -141,7 +140,7 @@ const ConfirmEmailForm = () => {
             </Form>
 
             <div className="mt-4 text-center text-sm text-gray-600">
-                Didn't receive the code?{" "}
+                Didn&apos;t receive the code?
                 <button 
                     className="text-amber-400 hover:text-amber-500 transition duration-300 ease-in-out underline"
                     onClick={async() => {

@@ -18,8 +18,6 @@ import {
     Phone,
     Mail,
     MapPin,
-    Filter,
-    Download,
     Plus
 } from "lucide-react";
 
